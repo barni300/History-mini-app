@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>История: Запомни даты</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <!-- Стартовая страница -->
+    <div id="home-screen">
+        <h1>Выберите тему</h1>
+        <div id="topics" class="grid"></div>
+    </div>
+
+    <!-- Страница викторины -->
+    <div id="quiz-screen" class="hidden">
+        <div id="category-tabs" class="tabs">
+            <button onclick="selectCategory('dates')" class="active">Даты</button>
+            <button onclick="selectCategory('persons')">Личности</button>
+            <button onclick="selectCategory('maps')">Карты</button>
+            <button onclick="selectCategory('culture')">Культура</button>
+        </div>
+
+        <div id="quiz-area" class="quiz">
+            <div id="question" class="question"></div>
+            <div id="options" class="grid options"></div>
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <button id="back-button" onclick="goHome()">← Назад к темам</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
