@@ -12,7 +12,7 @@ let currentTopic = null;
 let currentQuestionIndex = 0;
 
 const data = {
-    '1. Стародавня історія України': {
+    '1': {
         dates: [
             {
                 question: 'розселення племен трипільської і середньостогівської археологічних культур на території України',
@@ -21,7 +21,7 @@ const data = {
             }
         ]
     },
-    '2. Русь-Україна (Київська держава)': {
+    '2': {
         dates: [
             {
                 question: 'Запровадження християнства як державної релігії',
@@ -36,7 +36,7 @@ function createTopicButtons() {
     for (let i = 1; i <= 32; i++) {
         const btn = document.createElement('button');
         btn.textContent = `Тема ${i}`;
-        btn.onclick = () => selectTopic(`Тема ${i}`);
+        btn.onclick = () => selectTopic(`${i}`);
         topicsContainer.appendChild(btn);
     }
 }
