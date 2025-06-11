@@ -24,7 +24,7 @@ const data = {
 };
 
 function createTopicButtons() {
-    for (let i = 1; i <= 30; i++) {
+    for (let i = 1; i <= 32; i++) {
         const btn = document.createElement('button');
         btn.textContent = `Тема ${i}`;
         btn.onclick = () => selectTopic(`Тема ${i}`);
